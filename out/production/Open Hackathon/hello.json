@@ -1,0 +1,42 @@
+{
+  "blocks": [
+    {
+      "idMalady": "First Malady",
+      "number": 1,
+      "maladyValue": 1,
+      "previousHash": "0000",
+      "idPatient": "First One",
+      "nonce": 1,
+      "hash": "25d0b43f4187733c401d30c26dd6dbb194c66c1ad8466192046c70cd6e63cdcf"
+    },
+    {
+      "idMalady": "1",
+      "number": 2,
+      "maladyValue": 1,
+      "previousHash": "25d0b43f4187733c401d30c26dd6dbb194c66c1ad8466192046c70cd6e63cdcf",
+      "idPatient": "1",
+      "nonce": 89,
+      "hash": "00f2885e20b8d40b66b26c66d7aa987fab1863494806cf668617f8fcee47ede2"
+    },
+    {
+      "idMalady": "2",
+      "number": 3,
+      "maladyValue": 2,
+      "previousHash": "00f2885e20b8d40b66b26c66d7aa987fab1863494806cf668617f8fcee47ede2",
+      "idPatient": "2",
+      "nonce": 163,
+      "hash": "00c8f28ed7572b50792d61ee568662255bf8aa54ca2373799c16df9a4244d59c"
+    },
+    {
+      "idMalady": "3",
+      "number": 4,
+      "maladyValue": 3,
+      "previousHash": "00c8f28ed7572b50792d61ee568662255bf8aa54ca2373799c16df9a4244d59c",
+      "idPatient": "3",
+      "nonce": 7,
+      "hash": "001671f2c4e2c5bebdddd384baaef4e20bb26c7d23fda4e0020b337041df5354"
+    }
+  ],
+  "isValid": true,
+  "length": 4
+}

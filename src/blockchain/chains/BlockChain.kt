@@ -11,7 +11,7 @@ abstract class BlockChain<T, in B> {
     val lastBLock: T
         get() = blockChain[blockChain.lastIndex]
 
-    fun add(block: T) = blockChain.add(block)
+    fun add(block: B) = blockChain.add(mineBlock(block))
 
     abstract fun mineBlock(model: B): T
 
@@ -20,7 +20,7 @@ abstract class BlockChain<T, in B> {
         val blocksArray = JSONArray()
 
         for (block in blockChain) {
-            blocksArray.put(JSONObject((block as Block).toStringBlock()))
+            blocksArray.put(JSONObject((block as Block).toStringBlockChain()))
         }
 
         blockChainObject.put("blocks", blocksArray)
@@ -35,7 +35,7 @@ abstract class BlockChain<T, in B> {
         while (currentIndex < blockChain.size) {
             with(blockChain[currentIndex] as Block) {
                 if (this.previousHash != previous.hash) return false
-                if (this.hash[0] != '0') return false
+                if (!this.hash.startsWith("00")) return false
                 previous = this
                 currentIndex++
             }

@@ -12,4 +12,6 @@ abstract class Block(val number: Long,
         get() = HashUtils.hash(this)
 
     abstract fun toStringBlock(): String
+
+    abstract fun toStringBlockChain(): String
 }

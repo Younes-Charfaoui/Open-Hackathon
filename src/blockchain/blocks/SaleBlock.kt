@@ -12,6 +12,16 @@ class SaleBlock(number: Long,
                 nonce: Int,
                 timestamp: Date,
                 previousHash: String) : Block(number, nonce, timestamp, previousHash) {
+    override fun toStringBlockChain(): String {
+        val blockObject = JSONObject()
+        blockObject.put("number", number)
+                .put("idPatient", idPatient)
+                .put("productId", productId)
+                .put("nonce", nonce)
+                .put("hash", hash)
+                .put("timestamp", timestamp)
+                .put("previousHash", previousHash)
+        return blockObject.toString()    }
 
     override fun toStringBlock(): String {
         val blockObject = JSONObject()

@@ -20,7 +20,21 @@ class MaladyBlock(number: Long,
                 .put("idPatient", idPatient)
                 .put("idMalady", idMalady)
                 .put("maladyValue", maladyValue)
+                .put("previousHash", previousHash)
+                .put("nonce", nonce)
+
+        return blockObject.toString()
+    }
+
+    override fun toStringBlockChain(): String {
+        val blockObject = JSONObject()
+
+        blockObject.put("number", number)
+                .put("idPatient", idPatient)
                 .put("idMalady", idMalady)
+                .put("maladyValue", maladyValue)
+                .put("idMalady", idMalady)
+                .put("hash", hash)
                 .put("nonce", nonce)
                 .put("previousHash", previousHash)
         return blockObject.toString()
