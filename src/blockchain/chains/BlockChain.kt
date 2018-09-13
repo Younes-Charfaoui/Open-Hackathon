@@ -1,12 +1,13 @@
 package blockchain.chains
 
 import blockchain.blocks.Block
+import blockchain.factory.BlockchainPeersFactory
 import org.json.JSONArray
 import org.json.JSONObject
 
 abstract class BlockChain<T, in B>(data: MutableList<T> = mutableListOf<T>()) {
 
-    val blockChain = data
+    var blockChain = data
 
     companion object {
         const val PROOF = "00"
@@ -55,4 +56,6 @@ abstract class BlockChain<T, in B>(data: MutableList<T> = mutableListOf<T>()) {
         }
         return true
     }
+
+
 }

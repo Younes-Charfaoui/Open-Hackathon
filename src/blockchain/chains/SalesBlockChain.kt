@@ -3,6 +3,8 @@ package blockchain.chains
 import blockchain.blocks.Block
 import blockchain.blocks.MaladyBlock
 import blockchain.blocks.SaleBlock
+import blockchain.factory.BlockchainFactory
+import blockchain.factory.BlockchainPeersFactory
 import blockchain.models.Sale
 import org.json.JSONObject
 import utils.HashUtils
@@ -63,5 +65,28 @@ class SalesBlockChain(data: MutableList<SaleBlock> = mutableListOf())
                 return Date(block.timestamp)
         }
         return null
+    }
+
+    fun replaceChain(nodes: Array<String>) : Boolean {
+
+        var longestChain: BlockChain<*, *>? = null
+        var maxLength = blockChain.size
+
+        for (node in nodes){
+            val blockPeer = BlockchainPeersFactory.getMaladiesBlockchain(node)
+            val len = blockPeer.blockChain.size
+
+            if (len > maxLength && blockPeer.isValid()) {
+                maxLength = len
+                longestChain = blockPeer
+            }
+        }
+        if (longestChain != null){
+            @Suppress("UNCHECKED_CAST")
+            blockChain = longestChain.blockChain as MutableList<SaleBlock>
+            BlockchainFactory.saveBlockChainToJSONFile(this,"sales.json")
+            return true
+        }
+        return false
     }
 }

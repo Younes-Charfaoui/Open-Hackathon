@@ -3,6 +3,8 @@ package blockchain.chains
 import blockchain.blocks.Block
 import blockchain.blocks.MaladyBlock
 import blockchain.blocks.MaladyType
+import blockchain.factory.BlockchainFactory
+import blockchain.factory.BlockchainPeersFactory
 import blockchain.models.Malady
 import org.json.JSONObject
 import utils.HashUtils
@@ -56,6 +58,29 @@ class MaladyBlockChain(data: MutableList<MaladyBlock> = mutableListOf())
             val block = blockChain[i]
             if (block.idMalady == idMalady && block.idPatient == idPatient)
                 return block.maladyValue == MaladyType.SICK.value
+        }
+        return false
+    }
+
+    fun replaceChain(nodes: Array<String>) : Boolean {
+
+        var longestChain: BlockChain<*, *>? = null
+        var maxLength = blockChain.size
+
+        for (node in nodes){
+            val blockPeer = BlockchainPeersFactory.getMaladiesBlockchain(node)
+            val len = blockPeer.blockChain.size
+
+            if (len > maxLength && blockPeer.isValid()) {
+                maxLength = len
+                longestChain = blockPeer
+            }
+        }
+        if (longestChain != null){
+            @Suppress("UNCHECKED_CAST")
+            blockChain = longestChain.blockChain as MutableList<MaladyBlock>
+            BlockchainFactory.saveBlockChainToJSONFile(this,"maladies.json")
+            return true
         }
         return false
     }
