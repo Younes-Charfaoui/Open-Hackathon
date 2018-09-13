@@ -9,9 +9,11 @@ import java.util.*
 class SaleBlock(number: Long,
                 val idPatient: String,
                 val productId: String,
+                val pharmacyId: String,
                 nonce: Int,
                 timestamp: Date,
                 previousHash: String) : Block(number, nonce, timestamp, previousHash) {
+
     override fun toStringBlockChain(): String {
         val blockObject = JSONObject()
         blockObject.put("number", number)
@@ -21,16 +23,17 @@ class SaleBlock(number: Long,
                 .put("hash", hash)
                 .put("timestamp", timestamp)
                 .put("previousHash", previousHash)
-        return blockObject.toString()    }
+        return blockObject.toString()
+    }
 
     override fun toStringBlock(): String {
         val blockObject = JSONObject()
         blockObject.put("number", number)
                 .put("idPatient", idPatient)
                 .put("productId", productId)
-                .put("nonce", nonce)
-                .put("timestamp", timestamp)
+                .put("pharmacyId", pharmacyId)
                 .put("previousHash", previousHash)
+                .put("nonce", nonce)
         return blockObject.toString()
     }
 
