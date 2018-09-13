@@ -10,6 +10,7 @@ import blockchain.models.Malady
 import blockchain.models.Sale
 import org.json.JSONArray
 import java.io.FileWriter
+import java.net.Socket
 import java.nio.file.Files
 import java.nio.file.Paths
 
@@ -22,7 +23,6 @@ object BlockchainFactory {
 
         for (i in 0 until blocks.length()) {
             val block = blocks.getJSONObject(i)
-
             val idMalady = block.getString(MaladyBlock.ID_MALADY)
             val idPatient = block.getString(MaladyBlock.ID_PATIENT)
             val maladyValue = block.getInt(MaladyBlock.MALADY_VALUE)

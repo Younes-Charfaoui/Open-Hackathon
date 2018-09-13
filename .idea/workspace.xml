@@ -2,11 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="57fae78a-ef40-4ffc-a084-01bd558fba90" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/out/production/Open Hackathon/blockchain/MainKt.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/blockchain/blocks/MaladyBlock.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/blockchain/blocks/MaladyBlock.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/blockchain/chains/BlockChain.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/blockchain/chains/BlockChain.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/blockchain/chains/MaladyBlockChain.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/blockchain/chains/MaladyBlockChain.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/blockchain/chains/SalesBlockChain.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/blockchain/chains/SalesBlockChain.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/blockchain/factory/BlockchainFactory.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/blockchain/factory/BlockchainFactory.kt" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -82,8 +77,8 @@
       <file leaf-file-name="BlockchainFactory.kt" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/blockchain/factory/BlockchainFactory.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="415">
-              <caret line="31" selection-start-line="31" selection-end-line="31" />
+            <state relative-caret-position="420">
+              <caret line="49" column="45" selection-start-line="49" selection-start-column="45" selection-end-line="49" selection-end-column="45" />
               <folding>
                 <element signature="e#28#334#0" expanded="true" />
                 <element signature="n#!!block;n#saveBlockChainToJSONFile#0;n#!!block;n#BlockchainFactory#0" />
@@ -92,28 +87,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="maladies2.json" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/blockchain/maladies2.json">
+      <file leaf-file-name="server.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/server.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
-              <caret line="32" column="4" lean-forward="true" selection-start-line="32" selection-start-column="4" selection-end-line="32" selection-end-column="4" />
-              <folding>
-                <element signature="e#20#303#0" />
-                <element signature="e#309#633#0" />
-                <element signature="e#639#963#0" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="main.kt" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/blockchain/main.kt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="501">
-              <caret line="17" column="74" selection-start-line="17" selection-start-column="74" selection-end-line="17" selection-end-column="74" />
-              <folding>
-                <element signature="e#20#200#0" expanded="true" />
-              </folding>
+            <state>
+              <caret lean-forward="true" />
             </state>
           </provider>
         </entry>
@@ -175,11 +153,12 @@
         <option value="$PROJECT_DIR$/src/maladies.json" />
         <option value="$PROJECT_DIR$/src/sales.json" />
         <option value="$PROJECT_DIR$/src/blockchain/maladies2.json" />
-        <option value="$PROJECT_DIR$/src/blockchain/factory/BlockchainFactory.kt" />
         <option value="$PROJECT_DIR$/src/blockchain/chains/MaladyBlockChain.kt" />
         <option value="$PROJECT_DIR$/src/blockchain/chains/SalesBlockChain.kt" />
         <option value="$PROJECT_DIR$/src/blockchain/blocks/MaladyBlock.kt" />
         <option value="$PROJECT_DIR$/src/blockchain/main.kt" />
+        <option value="$PROJECT_DIR$/src/blockchain/factory/BlockchainFactory.kt" />
+        <option value="$PROJECT_DIR$/server.py" />
       </list>
     </option>
   </component>
@@ -221,34 +200,6 @@
               <item name="Open Hackathon" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="blockchain" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Open Hackathon" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Open Hackathon" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="blockchain" type="462c0819:PsiDirectoryNode" />
-              <item name="blocks" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Open Hackathon" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Open Hackathon" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="blockchain" type="462c0819:PsiDirectoryNode" />
-              <item name="chains" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Open Hackathon" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Open Hackathon" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="blockchain" type="462c0819:PsiDirectoryNode" />
-              <item name="factory" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Open Hackathon" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Open Hackathon" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="blockchain" type="462c0819:PsiDirectoryNode" />
-              <item name="models" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Open Hackathon" type="b2602c69:ProjectViewProjectNode" />
@@ -647,17 +598,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/blockchain/factory/BlockchainFactory.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="415">
-          <caret line="31" selection-start-line="31" selection-end-line="31" />
-          <folding>
-            <element signature="e#28#334#0" expanded="true" />
-            <element signature="n#!!block;n#saveBlockChainToJSONFile#0;n#!!block;n#BlockchainFactory#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/blockchain/chains/MaladyBlockChain.kt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-653">
@@ -691,11 +631,26 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/blockchain/main.kt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="501">
-          <caret line="17" column="74" selection-start-line="17" selection-start-column="74" selection-end-line="17" selection-end-column="74" />
+        <state relative-caret-position="240">
+          <caret line="8" column="29" selection-start-line="8" selection-start-column="29" selection-end-line="8" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/blockchain/factory/BlockchainFactory.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="420">
+          <caret line="49" column="45" selection-start-line="49" selection-start-column="45" selection-end-line="49" selection-end-column="45" />
           <folding>
-            <element signature="e#20#200#0" expanded="true" />
+            <element signature="e#28#334#0" expanded="true" />
+            <element signature="n#!!block;n#saveBlockChainToJSONFile#0;n#!!block;n#BlockchainFactory#0" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret lean-forward="true" />
         </state>
       </provider>
     </entry>
