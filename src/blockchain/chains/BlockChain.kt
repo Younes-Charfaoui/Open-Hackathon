@@ -8,6 +8,10 @@ abstract class BlockChain<T, in B> {
 
     val blockChain = mutableListOf<T>()
 
+    companion object {
+        const val PROOF = "00"
+    }
+
     val lastBLock: T
         get() = blockChain[blockChain.lastIndex]
 

@@ -5,8 +5,16 @@ import java.util.Date
 
 abstract class Block(val number: Long,
                      val nonce: Int,
-                     val timestamp: Date,
+                     val timestamp: Long,
                      val previousHash: String) {
+    companion object {
+        const val NUMBER = "number"
+        const val PREVIOUS_HASH = "previousHash"
+        const val HASH = "hash"
+        const val NONCE = "nonce"
+        const val TIMESTAMP = "timestamp"
+    }
+
 
     val hash: String
         get() = HashUtils.hash(this)

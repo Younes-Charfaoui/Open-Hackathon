@@ -1,36 +1,47 @@
 package blockchain.chains
 
-import blockchain.Sale
+import blockchain.blocks.Block
+import blockchain.blocks.MaladyBlock
 import blockchain.blocks.SaleBlock
+import blockchain.models.Sale
 import org.json.JSONObject
 import utils.HashUtils
 import java.util.*
 
+
+/**
+ * @definition: Class that represent the Sales BlockChain
+ * and it's corresponding functions.
+ */
 class SalesBlockChain : BlockChain<SaleBlock, Sale>() {
 
     init {
+        // genesis block
         blockChain.add(SaleBlock(1, "First One",
-                "First Product", "12", 1, Date(), "0000"))
+                "First Product", "12", 1, Date().time, "0000"))
     }
 
-
+    /**
+     * this function is responsible to find value for the nonce
+     * to make us able to add block to chain.
+     */
     override fun mineBlock(model: Sale): SaleBlock {
         var nonce = 1
         var check = false
         val jsonObject = JSONObject()
 
-        jsonObject.put("number", lastBLock.number + 1)
-        jsonObject.put("idPatient", model.idPatient)
-        jsonObject.put("productId", model.productId)
-        jsonObject.put("pharmacyId", model.pharmacyId)
-        jsonObject.put("previousHash", lastBLock.hash)
+        jsonObject.put(Block.NUMBER, lastBLock.number + 1)
+        jsonObject.put(MaladyBlock.ID_PATIENT, model.idPatient)
+        jsonObject.put(SaleBlock.PRODUCT_ID, model.productId)
+        jsonObject.put(SaleBlock.PHARMACY_ID, model.pharmacyId)
+        jsonObject.put(Block.PREVIOUS_HASH, lastBLock.hash)
 
 
         while (!check) {
 
-            val hash = HashUtils.hash(JSONObject(jsonObject.toString()).put("nonce", nonce).toString())
+            val hash = HashUtils.hash(JSONObject(jsonObject.toString()).put(Block.NONCE, nonce).toString())
             // the proof of work
-            if (hash.startsWith("00"))
+            if (hash.startsWith(PROOF))
                 check = true
             else
                 nonce++
@@ -40,9 +51,8 @@ class SalesBlockChain : BlockChain<SaleBlock, Sale>() {
                 model.idPatient,
                 model.productId,
                 model.pharmacyId,
-                nonce, Date(), lastBLock.hash)
+                nonce, Date().time, lastBLock.hash)
         blockChain.add(newBlock)
-        println(newBlock.toStringBlockChain())
         return newBlock
     }
 }

@@ -1,7 +1,6 @@
 package blockchain.blocks
 
 import org.json.JSONObject
-import java.util.*
 
 /**
  * @Definition : Simple class to represent the Block of a Malady
@@ -11,17 +10,23 @@ class MaladyBlock(number: Long,
                   val idMalady: String,
                   val maladyValue: Int,
                   nonce: Int,
-                  timestamp: Date,
+                  timestamp: Long,
                   previousHash: String) : Block(number, nonce, timestamp, previousHash) {
+
+    companion object {
+        const val ID_PATIENT = "idPatient"
+        const val ID_MALADY = "idMalady"
+        const val MALADY_VALUE = "maladyValue"
+    }
 
     override fun toStringBlock(): String {
         val blockObject = JSONObject()
-        blockObject.put("number", number)
-                .put("idPatient", idPatient)
-                .put("idMalady", idMalady)
-                .put("maladyValue", maladyValue)
-                .put("previousHash", previousHash)
-                .put("nonce", nonce)
+        blockObject.put(NUMBER, number)
+                .put(ID_PATIENT, idPatient)
+                .put(ID_MALADY, idMalady)
+                .put(MALADY_VALUE, maladyValue)
+                .put(PREVIOUS_HASH, previousHash)
+                .put(NONCE, nonce)
 
         return blockObject.toString()
     }
@@ -29,14 +34,14 @@ class MaladyBlock(number: Long,
     override fun toStringBlockChain(): String {
         val blockObject = JSONObject()
 
-        blockObject.put("number", number)
-                .put("idPatient", idPatient)
-                .put("idMalady", idMalady)
-                .put("maladyValue", maladyValue)
-                .put("idMalady", idMalady)
-                .put("hash", hash)
-                .put("nonce", nonce)
-                .put("previousHash", previousHash)
+        blockObject.put(NUMBER, number)
+                .put(ID_PATIENT, idPatient)
+                .put(ID_MALADY, idMalady)
+                .put(MALADY_VALUE, maladyValue)
+                .put(ID_MALADY, idMalady)
+                .put(HASH, hash)
+                .put(NONCE, nonce)
+                .put(PREVIOUS_HASH, previousHash)
         return blockObject.toString()
     }
 
