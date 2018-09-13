@@ -1,7 +1,6 @@
-package blockchain
+package blockchain.blocks
 
 import org.json.JSONObject
-import utils.HashUtils
 import java.util.*
 
 /**

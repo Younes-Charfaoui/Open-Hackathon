@@ -1,4 +1,4 @@
-package blockchain
+package blockchain.blocks
 
 import org.json.JSONObject
 import java.util.*

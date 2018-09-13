@@ -2,9 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="57fae78a-ef40-4ffc-a084-01bd558fba90" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/KotlinJavaRuntime.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/KotlinJavaRuntime.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Open Hackathon.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Open Hackathon.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/blockchain/Block.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/blockchain/blocks/Block.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/blockchain/MaladyBlock.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/blockchain/blocks/MaladyBlock.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/blockchain/SaleBlock.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/blockchain/blocks/SaleBlock.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/utils/HashUtils.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/HashUtils.kt" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -16,11 +18,59 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="Block.kt" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/blockchain/Block.kt">
+      <file leaf-file-name="MaladyBlock.kt" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/blockchain/blocks/MaladyBlock.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="254">
-              <caret line="9" column="12" selection-start-line="9" selection-start-column="12" selection-end-line="9" selection-end-column="12" />
+            <state relative-caret-position="90">
+              <caret line="11" column="18" lean-forward="true" selection-start-line="11" selection-start-column="18" selection-end-line="11" selection-end-column="18" />
+              <folding>
+                <element signature="e#20#65#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="BlockChain.kt" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/blockchain/chains/BlockChain.kt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret lean-forward="true" />
+              <folding>
+                <element signature="e#27#110#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MaladyType.kt" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/blockchain/blocks/MaladyType.kt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="120">
+              <caret line="4" selection-start-line="4" selection-end-line="4" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SaleBlock.kt" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/blockchain/blocks/SaleBlock.kt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="270">
+              <caret line="11" column="27" lean-forward="true" selection-start-line="11" selection-start-column="27" selection-end-line="11" selection-end-column="27" />
+              <folding>
+                <element signature="e#20#88#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Block.kt" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/blockchain/blocks/Block.kt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="60">
+              <caret line="3" column="21" lean-forward="true" selection-start-line="3" selection-start-column="21" selection-end-line="3" selection-end-column="21" />
+              <folding>
+                <element signature="e#20#64#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -28,8 +78,8 @@
       <file leaf-file-name="HashUtils.kt" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/utils/HashUtils.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="344">
-              <caret line="16" column="34" selection-start-line="16" selection-start-column="34" selection-end-line="16" selection-end-column="34" />
+            <state relative-caret-position="30">
+              <caret line="5" column="5" lean-forward="true" selection-start-line="5" selection-start-column="5" selection-end-line="5" selection-end-column="5" />
               <folding>
                 <element signature="e#15#73#0" expanded="true" />
               </folding>
@@ -42,7 +92,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="JUnit4 Test Class" />
         <option value="Kotlin Class" />
+        <option value="Kotlin File" />
       </list>
     </option>
   </component>
@@ -53,7 +105,14 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/src/blockchain/Block.kt" />
+        <option value="$PROJECT_DIR$/src/blockchain/MaladyBlock.kt" />
+        <option value="$PROJECT_DIR$/src/blockchain/SaleBlock.kt" />
         <option value="$PROJECT_DIR$/src/utils/HashUtils.kt" />
+        <option value="$PROJECT_DIR$/test/blockchain/MaladyBlockTest.kt" />
+        <option value="$PROJECT_DIR$/src/blockchain/BlockChain.kt" />
+        <option value="$PROJECT_DIR$/src/blockchain/blocks/BlockChain.kt" />
+        <option value="$PROJECT_DIR$/src/blockchain/blocks/MaladyType.kt" />
+        <option value="$PROJECT_DIR$/src/blockchain/chains/BlockChain.kt" />
       </list>
     </option>
   </component>
@@ -94,6 +153,20 @@
               <item name="Open Hackathon" type="b2602c69:ProjectViewProjectNode" />
               <item name="Open Hackathon" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="blockchain" type="462c0819:PsiDirectoryNode" />
+              <item name="blocks" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Open Hackathon" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Open Hackathon" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="blockchain" type="462c0819:PsiDirectoryNode" />
+              <item name="chains" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Open Hackathon" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Open Hackathon" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="utils" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
@@ -105,14 +178,29 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
+    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit4" />
+    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit4" value="" />
     <property name="last_opened_file_path" value="E:/Developper Tools/Java/JDK and Libraries/json-20170516.jar!/" />
     <property name="project.structure.last.edited" value="Libraries" />
-    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
     <property name="show.migrate.to.gradle.popup" value="false" />
   </component>
   <component name="RecentsManager">
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="blockchain" />
+    </key>
+    <key name="CopyKotlinDeclarationDialog.RECENTS_KEY">
+      <recent name="blockchain" />
+    </key>
+    <key name="MoveKotlinTopLevelDeclarationsDialog.RECENTS_KEY">
+      <recent name="blockchain.chains" />
+      <recent name="blockchain.blocks" />
+    </key>
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="E:\Projects\Kotlin\Open Hackathon\src\utils" />
     </key>
@@ -198,11 +286,11 @@
       <window_info anchor="right" id="Maven Projects" />
       <window_info anchor="bottom" id="Run" order="2" />
       <window_info anchor="bottom" id="Version Control" />
-      <window_info anchor="bottom" id="Terminal" />
+      <window_info anchor="bottom" id="Terminal" weight="0.32843137" />
       <window_info anchor="right" id="Flutter Outline" />
       <window_info id="Capture Tool" />
       <window_info id="Designer" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24963397" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24962178" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info id="UI Designer" />
@@ -222,20 +310,67 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/test/blockchain/MaladyBlockTest.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/blockchain/blocks/MaladyBlock.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="11" column="18" lean-forward="true" selection-start-line="11" selection-start-column="18" selection-end-line="11" selection-end-column="18" />
+          <folding>
+            <element signature="e#20#65#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/utils/HashUtils.kt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="344">
-          <caret line="16" column="34" selection-start-line="16" selection-start-column="34" selection-end-line="16" selection-end-column="34" />
+        <state relative-caret-position="30">
+          <caret line="5" column="5" lean-forward="true" selection-start-line="5" selection-start-column="5" selection-end-line="5" selection-end-column="5" />
           <folding>
             <element signature="e#15#73#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/blockchain/Block.kt">
+    <entry file="file://$PROJECT_DIR$/src/blockchain/blocks/Block.kt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="254">
-          <caret line="9" column="12" selection-start-line="9" selection-start-column="12" selection-end-line="9" selection-end-column="12" />
+        <state relative-caret-position="60">
+          <caret line="3" column="21" lean-forward="true" selection-start-line="3" selection-start-column="21" selection-end-line="3" selection-end-column="21" />
+          <folding>
+            <element signature="e#20#64#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/blockchain/blocks/SaleBlock.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="11" column="27" lean-forward="true" selection-start-line="11" selection-start-column="27" selection-end-line="11" selection-end-column="27" />
+          <folding>
+            <element signature="e#20#88#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/blockchain/blocks/MaladyType.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="4" selection-start-line="4" selection-end-line="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/blockchain/chains/BlockChain.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret lean-forward="true" />
+          <folding>
+            <element signature="e#27#110#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

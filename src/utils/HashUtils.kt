@@ -1,6 +1,6 @@
 package utils
 
-import blockchain.Block
+import blockchain.blocks.Block
 import java.security.MessageDigest
 
 class HashUtils {
