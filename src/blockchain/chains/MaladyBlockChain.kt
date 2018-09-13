@@ -2,6 +2,7 @@ package blockchain.chains
 
 import blockchain.blocks.Block
 import blockchain.blocks.MaladyBlock
+import blockchain.blocks.MaladyType
 import blockchain.models.Malady
 import org.json.JSONObject
 import utils.HashUtils
@@ -48,5 +49,14 @@ class MaladyBlockChain(data: MutableList<MaladyBlock> = mutableListOf())
                 nonce, Date().time, lastBLock.hash)
         blockChain.add(newBlock)
         return newBlock
+    }
+
+    fun isPatientAMalady(idPatient: String, idMalady: String): Boolean {
+        for (i in blockChain.size - 1 downTo 0) {
+            val block = blockChain[i]
+            if (block.idMalady == idMalady && block.idPatient == idPatient)
+                return block.maladyValue == MaladyType.SICK.value
+        }
+        return false
     }
 }

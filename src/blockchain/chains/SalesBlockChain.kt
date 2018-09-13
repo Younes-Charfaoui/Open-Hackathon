@@ -39,7 +39,6 @@ class SalesBlockChain(data: MutableList<SaleBlock> = mutableListOf())
         jsonObject.put(Block.PREVIOUS_HASH, lastBLock.hash)
 
         while (!check) {
-
             val hash = HashUtils.hash(JSONObject(jsonObject.toString()).put(Block.NONCE, nonce).toString())
             // the proof of work
             if (hash.startsWith(PROOF))
@@ -55,5 +54,14 @@ class SalesBlockChain(data: MutableList<SaleBlock> = mutableListOf())
                 nonce, Date().time, lastBLock.hash)
         blockChain.add(newBlock)
         return newBlock
+    }
+
+    fun lastSales(idPatient: String, idProduct: String): Date? {
+        for (i in blockChain.size - 1 downTo 0) {
+            val block = blockChain[i]
+            if (block.idPatient == idPatient && block.productId == idProduct)
+                return Date(block.timestamp)
+        }
+        return null
     }
 }
