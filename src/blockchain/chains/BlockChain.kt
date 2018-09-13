@@ -15,8 +15,6 @@ abstract class BlockChain<T, in B> {
     val lastBLock: T
         get() = blockChain[blockChain.lastIndex]
 
-    fun add(block: B) = blockChain.add(mineBlock(block))
-
     abstract fun mineBlock(model: B): T
 
     override fun toString(): String {
@@ -50,7 +48,7 @@ abstract class BlockChain<T, in B> {
         while (currentIndex < blockChain.size) {
             with(blockChain[currentIndex] as Block) {
                 if (this.previousHash != previous.hash) return false
-                if (!this.hash.startsWith("00")) return false
+                if (!this.hash.startsWith(PROOF)) return false
                 previous = this
                 currentIndex++
             }

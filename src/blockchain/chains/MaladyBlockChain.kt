@@ -26,7 +26,7 @@ class MaladyBlockChain : BlockChain<MaladyBlock, Malady>() {
         jsonObject.put(Block.NUMBER, lastBLock.number + 1)
         jsonObject.put(MaladyBlock.ID_PATIENT, model.idPatient)
         jsonObject.put(MaladyBlock.ID_MALADY, model.idMalady)
-        jsonObject.put(MaladyBlock.MALADY_VALUE, model.maladyValue)
+        jsonObject.put(MaladyBlock.MALADY_VALUE, model.maladyValue.value)
         jsonObject.put(Block.PREVIOUS_HASH, lastBLock.hash)
 
         while (!check) {
@@ -45,6 +45,8 @@ class MaladyBlockChain : BlockChain<MaladyBlock, Malady>() {
                 model.maladyValue.value,
                 nonce, Date().time, lastBLock.hash)
         blockChain.add(newBlock)
+        println(newBlock.toString())
+        println(newBlock.toStringBlockChain())
         return newBlock
     }
 }

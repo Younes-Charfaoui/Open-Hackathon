@@ -21,11 +21,11 @@ class MaladyBlock(number: Long,
 
     override fun toStringBlock(): String {
         val blockObject = JSONObject()
-        blockObject.put(NUMBER, number)
+        blockObject.put(Block.NUMBER, number)
                 .put(ID_PATIENT, idPatient)
                 .put(ID_MALADY, idMalady)
                 .put(MALADY_VALUE, maladyValue)
-                .put(PREVIOUS_HASH, previousHash)
+                .put(Block.PREVIOUS_HASH, previousHash)
                 .put(NONCE, nonce)
 
         return blockObject.toString()
@@ -47,6 +47,6 @@ class MaladyBlock(number: Long,
 
     // just for debug
     override fun toString(): String {
-        return "MaladyBlock(number=$number, idPatient='$idPatient', idMalady='$idMalady', maladyValue=$maladyValue, nonce=$nonce, previousHash='$previousHash')"
+        return "MaladyBlock(number=$number, idPatient='$idPatient', idMalady='$idMalady', hash='$hash', maladyValue=$maladyValue, nonce=$nonce, previousHash='$previousHash')"
     }
 }
