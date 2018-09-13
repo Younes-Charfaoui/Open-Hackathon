@@ -13,12 +13,14 @@ import java.util.*
  * @definition: Class that represent the Sales BlockChain
  * and it's corresponding functions.
  */
-class SalesBlockChain : BlockChain<SaleBlock, Sale>() {
+class SalesBlockChain(data: MutableList<SaleBlock> = mutableListOf())
+    : BlockChain<SaleBlock, Sale>(data) {
 
     init {
         // genesis block
-        blockChain.add(SaleBlock(1, "First One",
-                "First Product", "12", 1, Date().time, "0000"))
+        if (blockChain.size == 0)
+            blockChain.add(SaleBlock(1, "First One",
+                    "First Product", "12", 1, Date().time, "0000"))
     }
 
     /**
@@ -35,7 +37,6 @@ class SalesBlockChain : BlockChain<SaleBlock, Sale>() {
         jsonObject.put(SaleBlock.PRODUCT_ID, model.productId)
         jsonObject.put(SaleBlock.PHARMACY_ID, model.pharmacyId)
         jsonObject.put(Block.PREVIOUS_HASH, lastBLock.hash)
-
 
         while (!check) {
 

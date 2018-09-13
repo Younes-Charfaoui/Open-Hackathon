@@ -4,9 +4,9 @@ import blockchain.blocks.Block
 import org.json.JSONArray
 import org.json.JSONObject
 
-abstract class BlockChain<T, in B> {
+abstract class BlockChain<T, in B>(data: MutableList<T> = mutableListOf<T>()) {
 
-    val blockChain = mutableListOf<T>()
+    val blockChain = data
 
     companion object {
         const val PROOF = "00"

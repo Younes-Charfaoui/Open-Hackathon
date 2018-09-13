@@ -41,7 +41,9 @@ class MaladyBlock(number: Long,
                 .put(ID_MALADY, idMalady)
                 .put(HASH, hash)
                 .put(NONCE, nonce)
+                .put(TIMESTAMP, timestamp)
                 .put(PREVIOUS_HASH, previousHash)
+
         return blockObject.toString()
     }
 

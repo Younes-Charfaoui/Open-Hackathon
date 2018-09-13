@@ -11,11 +11,13 @@ import java.util.*
  * @definition: Class that represent the Malady BlockChain
  * and it's corresponding functions.
  */
-class MaladyBlockChain : BlockChain<MaladyBlock, Malady>() {
+class MaladyBlockChain(data: MutableList<MaladyBlock> = mutableListOf())
+    : BlockChain<MaladyBlock, Malady>(data) {
 
     init {
-        blockChain.add(MaladyBlock(1, "First One",
-                "First Malady", 1, 1, Date().time, "0000"))
+        if (blockChain.size == 0)
+            blockChain.add(MaladyBlock(1, "First One",
+                    "First Malady", 1, 1, Date().time, "0000"))
     }
 
     override fun mineBlock(model: Malady): MaladyBlock {
@@ -45,8 +47,6 @@ class MaladyBlockChain : BlockChain<MaladyBlock, Malady>() {
                 model.maladyValue.value,
                 nonce, Date().time, lastBLock.hash)
         blockChain.add(newBlock)
-        println(newBlock.toString())
-        println(newBlock.toStringBlockChain())
         return newBlock
     }
 }
