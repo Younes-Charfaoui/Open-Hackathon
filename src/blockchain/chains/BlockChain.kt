@@ -4,14 +4,16 @@ import blockchain.blocks.Block
 import org.json.JSONArray
 import org.json.JSONObject
 
-abstract class BlockChain<T> {
+abstract class BlockChain<T, in B> {
 
-    private val blockChain = mutableListOf<T>()
+    val blockChain = mutableListOf<T>()
 
     val lastBLock: T
         get() = blockChain[blockChain.lastIndex]
 
-    abstract fun mineBlock(): T
+    fun add(block: T) = blockChain.add(block)
+
+    abstract fun mineBlock(model: B): T
 
     override fun toString(): String {
         val blockChainObject = JSONObject()
@@ -27,11 +29,11 @@ abstract class BlockChain<T> {
         return blockChainObject.toString()
     }
 
-    fun isValid() : Boolean {
+    fun isValid(): Boolean {
         var previous = blockChain[0] as Block
         var currentIndex = 1
-        while (currentIndex < blockChain.size){
-            with(blockChain[currentIndex] as Block){
+        while (currentIndex < blockChain.size) {
+            with(blockChain[currentIndex] as Block) {
                 if (this.previousHash != previous.hash) return false
                 if (this.hash[0] != '0') return false
                 previous = this
@@ -39,4 +41,5 @@ abstract class BlockChain<T> {
             }
         }
         return true
-    }}
+    }
+}

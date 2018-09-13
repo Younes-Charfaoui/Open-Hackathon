@@ -2,11 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="57fae78a-ef40-4ffc-a084-01bd558fba90" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/blockchain/Block.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/blockchain/blocks/Block.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/blockchain/MaladyBlock.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/blockchain/blocks/MaladyBlock.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/blockchain/SaleBlock.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/blockchain/blocks/SaleBlock.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/utils/HashUtils.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/HashUtils.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/blockchain/chains/BlockChain.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/blockchain/chains/BlockChain.kt" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -21,8 +17,8 @@
       <file leaf-file-name="MaladyBlock.kt" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/blockchain/blocks/MaladyBlock.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="90">
-              <caret line="11" column="18" lean-forward="true" selection-start-line="11" selection-start-column="18" selection-end-line="11" selection-end-column="18" />
+            <state relative-caret-position="150">
+              <caret line="9" column="18" selection-start-line="9" selection-start-column="18" selection-end-line="11" selection-end-column="39" />
               <folding>
                 <element signature="e#20#65#0" expanded="true" />
               </folding>
@@ -30,11 +26,32 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="BlockChain.kt" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/blockchain/chains/BlockChain.kt">
+      <file leaf-file-name="MaladyBlockChain.kt" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/blockchain/chains/MaladyBlockChain.kt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="381">
+              <caret line="31" column="19" lean-forward="true" selection-start-line="31" selection-start-column="19" selection-end-line="31" selection-end-column="19" />
+              <folding>
+                <element signature="e#27#157#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Models.kt" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/blockchain/Models.kt">
           <provider selected="true" editor-type-id="text-editor">
             <state>
               <caret lean-forward="true" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="BlockChain.kt" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/blockchain/chains/BlockChain.kt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="501">
+              <caret line="39" column="9" lean-forward="true" selection-start-line="39" selection-start-column="9" selection-end-line="39" selection-end-column="9" />
               <folding>
                 <element signature="e#27#110#0" expanded="true" />
               </folding>
@@ -54,8 +71,8 @@
       <file leaf-file-name="SaleBlock.kt" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/blockchain/blocks/SaleBlock.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
-              <caret line="11" column="27" lean-forward="true" selection-start-line="11" selection-start-column="27" selection-end-line="11" selection-end-column="27" />
+            <state relative-caret-position="210">
+              <caret line="9" column="16" selection-start-line="9" selection-start-column="16" selection-end-line="10" selection-end-column="38" />
               <folding>
                 <element signature="e#20#88#0" expanded="true" />
               </folding>
@@ -93,8 +110,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="JUnit4 Test Class" />
-        <option value="Kotlin Class" />
         <option value="Kotlin File" />
+        <option value="Kotlin Class" />
       </list>
     </option>
   </component>
@@ -112,7 +129,9 @@
         <option value="$PROJECT_DIR$/src/blockchain/BlockChain.kt" />
         <option value="$PROJECT_DIR$/src/blockchain/blocks/BlockChain.kt" />
         <option value="$PROJECT_DIR$/src/blockchain/blocks/MaladyType.kt" />
+        <option value="$PROJECT_DIR$/src/blockchain/Malady.kt" />
         <option value="$PROJECT_DIR$/src/blockchain/chains/BlockChain.kt" />
+        <option value="$PROJECT_DIR$/src/blockchain/chains/MaladyBlockChain.kt" />
       </list>
     </option>
   </component>
@@ -126,7 +145,7 @@
     <ConfirmationsSetting value="1" id="Add" />
   </component>
   <component name="ProjectView">
-    <navigator proportions="" version="1">
+    <navigator currentView="AndroidView" proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
@@ -173,7 +192,17 @@
           <select />
         </subPane>
       </pane>
-      <pane id="AndroidView" />
+      <pane id="AndroidView">
+        <subPane>
+          <expand>
+            <path>
+              <item name="Open Hackathon" type="1abcf292:AndroidViewProjectNode" />
+              <item name="Open Hackathon" type="e9137016:NonAndroidModuleNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
       <pane id="PackagesPane" />
     </panes>
   </component>
@@ -317,16 +346,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/blockchain/blocks/MaladyBlock.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="11" column="18" lean-forward="true" selection-start-line="11" selection-start-column="18" selection-end-line="11" selection-end-column="18" />
-          <folding>
-            <element signature="e#20#65#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/utils/HashUtils.kt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="30">
@@ -349,10 +368,30 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/blockchain/blocks/SaleBlock.kt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="11" column="27" lean-forward="true" selection-start-line="11" selection-start-column="27" selection-end-line="11" selection-end-column="27" />
+        <state relative-caret-position="210">
+          <caret line="9" column="16" selection-start-line="9" selection-start-column="16" selection-end-line="10" selection-end-column="38" />
           <folding>
             <element signature="e#20#88#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/blockchain/blocks/MaladyBlock.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="9" column="18" selection-start-line="9" selection-start-column="18" selection-end-line="11" selection-end-column="39" />
+          <folding>
+            <element signature="e#20#65#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/blockchain/chains/MaladyBlockChain.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="381">
+          <caret line="31" column="19" lean-forward="true" selection-start-line="31" selection-start-column="19" selection-end-line="31" selection-end-column="19" />
+          <folding>
+            <element signature="e#27#157#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -364,10 +403,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/blockchain/chains/BlockChain.kt">
+    <entry file="file://$PROJECT_DIR$/src/blockchain/Models.kt">
       <provider selected="true" editor-type-id="text-editor">
         <state>
           <caret lean-forward="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/blockchain/chains/BlockChain.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="501">
+          <caret line="39" column="9" lean-forward="true" selection-start-line="39" selection-start-column="9" selection-end-line="39" selection-end-column="9" />
           <folding>
             <element signature="e#27#110#0" expanded="true" />
           </folding>
