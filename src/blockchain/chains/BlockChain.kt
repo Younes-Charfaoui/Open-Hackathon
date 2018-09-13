@@ -33,6 +33,17 @@ abstract class BlockChain<T, in B> {
         return blockChainObject.toString()
     }
 
+    fun toSaveString(): String {
+
+        val blocksArray = JSONArray()
+
+        for (block in blockChain) {
+            blocksArray.put(JSONObject((block as Block).toStringBlockChain()))
+        }
+
+        return blocksArray.toString()
+    }
+
     fun isValid(): Boolean {
         var previous = blockChain[0] as Block
         var currentIndex = 1
