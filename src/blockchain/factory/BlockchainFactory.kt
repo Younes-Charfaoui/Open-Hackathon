@@ -14,8 +14,11 @@ import java.nio.file.Paths
 
 object BlockchainFactory {
 
-    fun readMaladyBlockChainFromJSONFile(path: String): MaladyBlockChain {
-        val blocks = JSONArray(String(Files.readAllBytes(Paths.get(path))))
+    const val MALADIES = "C:\\App\\maladies.json"
+    const val SALES = "C:\\App\\sales.json"
+
+    fun readMaladyBlockChainFromJSONFile(): MaladyBlockChain {
+        val blocks = JSONArray(String(Files.readAllBytes(Paths.get(MALADIES))))
         val allBlocks = mutableListOf<MaladyBlock>()
 
         for (i in 0 until blocks.length()) {
@@ -52,8 +55,8 @@ object BlockchainFactory {
         return MaladyBlockChain(allBlocks)
     }
 
-    fun readSalesBlockChainFromJSONFile(path: String): SalesBlockChain {
-        val blocks = JSONArray(String(Files.readAllBytes(Paths.get(path))))
+    fun readSalesBlockChainFromJSONFile(): SalesBlockChain {
+        val blocks = JSONArray(String(Files.readAllBytes(Paths.get(SALES))))
         val allBlocks = mutableListOf<SaleBlock>()
 
         for (i in 0 until (blocks.length())) {

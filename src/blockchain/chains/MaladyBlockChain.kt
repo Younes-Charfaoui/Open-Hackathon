@@ -6,6 +6,7 @@ import blockchain.blocks.MaladyType
 import blockchain.factory.BlockchainFactory
 import blockchain.factory.BlockchainPeersFactory
 import blockchain.models.Malady
+
 import org.json.JSONObject
 import utils.HashUtils
 import java.net.InetAddress
