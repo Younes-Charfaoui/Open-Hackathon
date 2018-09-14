@@ -3,6 +3,9 @@ package utils
 import com.mashape.unirest.http.Unirest
 import org.json.JSONArray
 
+/**
+ * Class to make common network calls
+ */
 object NetworkUtils {
 
     const val BASE_URL = ""

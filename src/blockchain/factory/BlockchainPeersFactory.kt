@@ -6,6 +6,10 @@ import blockchain.chains.MaladyBlockChain
 import blockchain.chains.SalesBlockChain
 import com.mashape.unirest.http.Unirest
 
+/**
+ * Singleton class to interact with other peers.
+ */
+
 object BlockchainPeersFactory {
 
     fun getSaleBlockchain(ipAddress: String): SalesBlockChain {

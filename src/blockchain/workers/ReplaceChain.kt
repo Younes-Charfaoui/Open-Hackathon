@@ -19,6 +19,7 @@ class ReplaceChain(private val type: ChainType) : Thread() {
                 BlockchainFactory.readMaladyBlockChainFromJSONFile()
             }
         }
+
         val nodes = NetworkUtils.getAllNodes()
         chain.replaceChain(nodes)
     }

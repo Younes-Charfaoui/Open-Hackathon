@@ -11,11 +11,14 @@ import java.io.FileWriter
 import java.nio.file.Files
 import java.nio.file.Paths
 
-
+/**
+ * Singleton Class to create Blockchains from file and JSON String
+ * and also for saving the Blockchains in files.
+ */
 object BlockchainFactory {
 
-    const val MALADIES = "C:\\App\\maladies.json"
-    const val SALES = "C:\\App\\sales.json"
+    private const val MALADIES = "C:\\App\\maladies.json"
+    private const val SALES = "C:\\App\\sales.json"
 
     fun readMaladyBlockChainFromJSONFile(): MaladyBlockChain {
         val blocks = JSONArray(String(Files.readAllBytes(Paths.get(MALADIES))))

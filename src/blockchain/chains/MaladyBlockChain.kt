@@ -6,7 +6,7 @@ import blockchain.blocks.MaladyStatus
 import blockchain.factory.BlockchainFactory
 import blockchain.factory.BlockchainPeersFactory
 import blockchain.models.Malady
-import blockchain.workers.NotifyMaladies
+import blockchain.workers.NotifyPeers
 
 import org.json.JSONObject
 import utils.HashUtils
@@ -14,8 +14,10 @@ import java.net.InetAddress
 import java.util.*
 
 /**
- * @definition: Class that represent the Malady BlockChain
+ * Class that represent the Malady BlockChain
  * and it's corresponding functions.
+ * @param data: a list of Maladies block to initialize the chain, if not provided
+ * a genesis block will be added.
  */
 class MaladyBlockChain(data: MutableList<MaladyBlock> = mutableListOf())
     : BlockChain<MaladyBlock, Malady>(data) {
@@ -28,7 +30,7 @@ class MaladyBlockChain(data: MutableList<MaladyBlock> = mutableListOf())
 
     fun addBlock(idPatient: String, idMalady: String, maladyStatus: MaladyStatus) {
         val block = this.mineBlock(Malady(idPatient, idMalady, maladyStatus))
-        NotifyMaladies(block).start()
+        NotifyPeers(block).start()
     }
 
     override fun mineBlock(model: Malady): MaladyBlock {
