@@ -1,5 +1,5 @@
 package blockchain.blocks
 
-enum class MaladyType(val value: Int) {
+enum class MaladyStatus(val value: Int) {
     SICK(1), NORMAL(0);
 }

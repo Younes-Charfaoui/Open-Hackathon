@@ -26,6 +26,10 @@ class SalesBlockChain(data: MutableList<SaleBlock> = mutableListOf())
                     "First Product", "12", 1, Date().time, "0000"))
     }
 
+    fun addBlock(idPatient: String, idProduct: String, idPharmacy: String) {
+        this.mineBlock(blockchain.models.Sale(idPatient, idProduct, idPharmacy))
+    }
+
     /**
      * this function is responsible to find value for the nonce
      * to make us able to add block to chain.
@@ -56,8 +60,6 @@ class SalesBlockChain(data: MutableList<SaleBlock> = mutableListOf())
                 model.pharmacyId,
                 nonce, Date().time, lastBLock.hash)
         blockChain.add(newBlock)
-
-
 
         return newBlock
     }

@@ -16,7 +16,7 @@ abstract class BlockChain<T, in B>(data: MutableList<T> = mutableListOf<T>()) {
     val lastBLock: T
         get() = blockChain[blockChain.lastIndex]
 
-    abstract fun mineBlock(model: B): T
+    protected abstract fun mineBlock(model: B): T
 
     override fun toString(): String {
         val blockChainObject = JSONObject()

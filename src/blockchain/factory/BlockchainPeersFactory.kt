@@ -17,13 +17,12 @@ object BlockchainPeersFactory {
         return BlockchainFactory.readMaladyBlockChainFromJSONString(data.body.toString())
     }
 
-    fun addMaladyBlockToPeer(ipAddress: String , block : Block): MaladyBlockChain {
-        val data = Unirest.get("$ipAddress:5000/addMaladyBlock?block=${block.toStringBlockChain()}").asJson()
-        return BlockchainFactory.readMaladyBlockChainFromJSONString(data.body.toString())
+    fun addMaladyBlockToPeer(ipAddress: String , block : Block) {
+        Unirest.get("$ipAddress:5000/addMaladyBlock?block=${block.toStringBlockChain()}").asJson()
+
     }
 
-    fun addSaleBlockToPeer(ipAddress: String , block : Block): MaladyBlockChain {
-        val data = Unirest.get("$ipAddress:5000/addSaleBlock?block=${block.toStringBlockChain()}").asJson()
-        return BlockchainFactory.readMaladyBlockChainFromJSONString(data.body.toString())
+    fun addSaleBlockToPeer(ipAddress: String , block : Block){
+        Unirest.get("$ipAddress:5000/addSaleBlock?block=${block.toStringBlockChain()}").asJson()
     }
 }

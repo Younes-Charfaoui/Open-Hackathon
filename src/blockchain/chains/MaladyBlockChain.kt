@@ -2,7 +2,7 @@ package blockchain.chains
 
 import blockchain.blocks.Block
 import blockchain.blocks.MaladyBlock
-import blockchain.blocks.MaladyType
+import blockchain.blocks.MaladyStatus
 import blockchain.factory.BlockchainFactory
 import blockchain.factory.BlockchainPeersFactory
 import blockchain.models.Malady
@@ -23,6 +23,11 @@ class MaladyBlockChain(data: MutableList<MaladyBlock> = mutableListOf())
         if (blockChain.size == 0)
             blockChain.add(MaladyBlock(1, "First One",
                     "First Malady", 1, 1, Date().time, "0000"))
+    }
+
+    fun addBlock(idPatient: String, idMalady: String, maladyStatus: MaladyStatus) {
+        val block = this.mineBlock(blockchain.models.Malady(idPatient, idMalady, maladyStatus))
+
     }
 
     override fun mineBlock(model: Malady): MaladyBlock {
@@ -59,7 +64,7 @@ class MaladyBlockChain(data: MutableList<MaladyBlock> = mutableListOf())
         for (i in blockChain.size - 1 downTo 0) {
             val block = blockChain[i]
             if (block.idMalady == idMalady && block.idPatient == idPatient)
-                return block.maladyValue == MaladyType.SICK.value
+                return block.maladyValue == MaladyStatus.SICK.value
         }
         return false
     }
