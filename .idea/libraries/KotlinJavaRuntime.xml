@@ -7,6 +7,7 @@
       <root url="jar://$KOTLIN_BUNDLED$/lib/kotlin-stdlib-jdk7.jar!/" />
       <root url="jar://$KOTLIN_BUNDLED$/lib/kotlin-stdlib-jdk8.jar!/" />
       <root url="jar://E:/Developper Tools/Java/JDK and Libraries/json-20170516.jar!/" />
+      <root url="jar://$USER_HOME$/Downloads/unirest-java-1.4.9.jar!/" />
     </CLASSES>
     <JAVADOC />
     <SOURCES>

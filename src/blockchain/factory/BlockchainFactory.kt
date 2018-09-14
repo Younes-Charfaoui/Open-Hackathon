@@ -99,7 +99,6 @@ object BlockchainFactory {
         return SalesBlockChain(allBlocks)
     }
 
-
     fun saveBlockChainToJSONFile(blockChain: BlockChain<*, *>, path: String) {
         FileWriter(path).use { file ->
             file.write(blockChain.toSaveString())
