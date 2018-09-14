@@ -10,7 +10,7 @@ class NotifySales(val block : Block) : Thread() {
     override fun run() {
         val nodes = NetworkUtils.getAllNodes()
         for (node in nodes){
-            BlockchainPeersFactory.addSaleBlockToPeer(node, block)
+            BlockchainPeersFactory.addBlockToPeer(node, block)
         }
     }
 }

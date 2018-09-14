@@ -6,6 +6,7 @@ import blockchain.blocks.SaleBlock
 import blockchain.factory.BlockchainFactory
 import blockchain.factory.BlockchainPeersFactory
 import blockchain.models.Sale
+import blockchain.workers.NotifySales
 import org.json.JSONObject
 import utils.HashUtils
 import java.net.InetAddress
@@ -27,7 +28,8 @@ class SalesBlockChain(data: MutableList<SaleBlock> = mutableListOf())
     }
 
     fun addBlock(idPatient: String, idProduct: String, idPharmacy: String) {
-        this.mineBlock(blockchain.models.Sale(idPatient, idProduct, idPharmacy))
+        val block = this.mineBlock(blockchain.models.Sale(idPatient, idProduct, idPharmacy))
+        NotifySales(block).start()
     }
 
     /**

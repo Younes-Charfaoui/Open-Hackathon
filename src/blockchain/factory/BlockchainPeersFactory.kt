@@ -1,6 +1,7 @@
 package blockchain.factory
 
 import blockchain.blocks.Block
+import blockchain.blocks.MaladyBlock
 import blockchain.chains.MaladyBlockChain
 import blockchain.chains.SalesBlockChain
 import com.mashape.unirest.http.Unirest
@@ -17,12 +18,7 @@ object BlockchainPeersFactory {
         return BlockchainFactory.readMaladyBlockChainFromJSONString(data.body.toString())
     }
 
-    fun addMaladyBlockToPeer(ipAddress: String , block : Block) {
-        Unirest.get("$ipAddress:5000/addMaladyBlock?block=${block.toStringBlockChain()}").asJson()
-
-    }
-
-    fun addSaleBlockToPeer(ipAddress: String , block : Block){
-        Unirest.get("$ipAddress:5000/addSaleBlock?block=${block.toStringBlockChain()}").asJson()
+    fun addBlockToPeer(ipAddress: String, block: Block) {
+        Unirest.get("$ipAddress:5000/${if (block is MaladyBlock) "addMaladyBlock" else "addSaleBlock"}?block=${block.toStringBlockChain()}").asJson()
     }
 }

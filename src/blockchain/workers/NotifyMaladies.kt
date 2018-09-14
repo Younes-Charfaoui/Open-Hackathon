@@ -10,7 +10,7 @@ class NotifyMaladies(val block : Block) : Thread() {
     override fun run() {
         val nodes = NetworkUtils.getAllNodes()
         for (node in nodes){
-            BlockchainPeersFactory.addMaladyBlockToPeer(node, block)
+            BlockchainPeersFactory.addBlockToPeer(node, block)
         }
     }
 }
