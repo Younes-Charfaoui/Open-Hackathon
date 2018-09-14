@@ -75,7 +75,7 @@ class SalesBlockChain(data: MutableList<SaleBlock> = mutableListOf())
         return null
     }
 
-    fun replaceChain(nodes: Array<String>): Boolean {
+    override fun replaceChain(nodes: Array<String>): Boolean {
         val address = InetAddress.getLocalHost()
         var longestChain: BlockChain<*, *>? = null
         var maxLength = blockChain.size

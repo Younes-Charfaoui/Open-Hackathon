@@ -69,7 +69,7 @@ class MaladyBlockChain(data: MutableList<MaladyBlock> = mutableListOf())
         return false
     }
 
-    fun replaceChain(nodes: Array<String>): Boolean {
+    override fun replaceChain(nodes: Array<String>): Boolean {
         val address = InetAddress.getLocalHost()
         var longestChain: BlockChain<*, *>? = null
         var maxLength = blockChain.size

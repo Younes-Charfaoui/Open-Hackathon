@@ -57,5 +57,5 @@ abstract class BlockChain<T, in B>(data: MutableList<T> = mutableListOf<T>()) {
         return true
     }
 
-
+    abstract fun replaceChain(nodes : Array<String>) : Boolean
 }

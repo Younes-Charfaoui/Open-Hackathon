@@ -7,11 +7,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="57fae78a-ef40-4ffc-a084-01bd558fba90" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/src/blockchain/chains/MaladyBlockChain.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/blockchain/chains/MaladyBlockChain.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/blockchain/chains/SalesBlockChain.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/blockchain/chains/SalesBlockChain.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/blockchain/factory/BlockchainPeersFactory.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/blockchain/factory/BlockchainPeersFactory.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/blockchain/workers/NotifyMaladies.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/blockchain/workers/NotifyMaladies.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/blockchain/workers/NotifySales.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/blockchain/workers/NotifySales.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/blockchain/workers/ReplaceMaladies.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/blockchain/workers/ReplaceMaladies.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/blockchain/workers/ReplaceSales.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/blockchain/workers/ReplaceSales.kt" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -35,23 +32,23 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MaladyStatus.kt" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/blockchain/blocks/MaladyStatus.kt">
+      <file leaf-file-name="ReplaceSales.kt" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/blockchain/workers/ReplaceSales.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="52">
-              <caret line="2" column="23" selection-start-line="2" selection-start-column="23" selection-end-line="2" selection-end-column="23" />
+            <state relative-caret-position="197">
+              <caret line="13" column="20" selection-start-line="13" selection-start-column="20" selection-end-line="13" selection-end-column="20" />
+              <folding>
+                <element signature="e#28#138#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ReplaceSales.kt" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/blockchain/workers/ReplaceSales.kt">
+      <file leaf-file-name="ChainType.kt" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/blockchain/workers/ChainType.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="234">
-              <caret line="9" column="46" selection-start-line="9" selection-start-column="46" selection-end-line="9" selection-end-column="46" />
-              <folding>
-                <element signature="e#28#97#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="78">
+              <caret line="3" column="17" selection-start-line="3" selection-start-column="17" selection-end-line="3" selection-end-column="17" />
             </state>
           </provider>
         </entry>
@@ -108,20 +105,24 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ReplaceMaladies.kt" pinned="false" current-in-tab="true">
+      <file leaf-file-name="ReplaceMaladies.kt" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/blockchain/workers/ReplaceMaladies.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="234">
-              <caret line="10" column="16" selection-start-line="10" selection-start-column="16" selection-end-line="10" selection-end-column="16" />
+            <state relative-caret-position="104">
+              <caret line="5" selection-start-line="5" selection-end-line="8" selection-end-column="3" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="server.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/server.py">
+      <file leaf-file-name="Thread.java" pinned="false" current-in-tab="false">
+        <entry file="jar://C:/Program Files/Java/jdk1.8.0_73/src.zip!/java/lang/Thread.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="208">
-              <caret line="8" column="28" lean-forward="true" selection-start-line="8" selection-start-column="28" selection-end-line="8" selection-end-column="28" />
+              <caret line="439" column="4" lean-forward="true" selection-start-line="436" selection-start-column="4" selection-end-line="439" selection-end-column="4" />
+              <folding>
+                <element signature="e#14796#14797#0" expanded="true" />
+                <element signature="e#14860#14861#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -133,9 +134,9 @@
       <list>
         <option value="JUnit4 Test Class" />
         <option value="FxmlFile" />
-        <option value="Kotlin Enum" />
         <option value="Kotlin File" />
         <option value="Kotlin Class" />
+        <option value="Kotlin Enum" />
       </list>
     </option>
   </component>
@@ -178,9 +179,7 @@
         <option value="$PROJECT_DIR$/src/blockchain/factory/BlockchainFactory.kt" />
         <option value="$PROJECT_DIR$/src/blockchain/workers/ReplaceChainWorker.kt" />
         <option value="$PROJECT_DIR$/src/utils/NetworkUtils.kt" />
-        <option value="$PROJECT_DIR$/src/blockchain/workers/ReplaceMaladies.kt" />
         <option value="$PROJECT_DIR$/src/blockchain/chains/BlockChain.kt" />
-        <option value="$PROJECT_DIR$/src/blockchain/workers/ReplaceSales.kt" />
         <option value="$PROJECT_DIR$/src/blockchain/blocks/MaladyType.kt" />
         <option value="$PROJECT_DIR$/src/blockchain/blocks/MaladyStatus.kt" />
         <option value="$PROJECT_DIR$/src/blockchain/workers/NotifyMaladies.kt" />
@@ -188,6 +187,9 @@
         <option value="$PROJECT_DIR$/src/blockchain/factory/BlockchainPeersFactory.kt" />
         <option value="$PROJECT_DIR$/src/blockchain/chains/MaladyBlockChain.kt" />
         <option value="$PROJECT_DIR$/src/blockchain/chains/SalesBlockChain.kt" />
+        <option value="$PROJECT_DIR$/src/blockchain/workers/ReplaceMaladies.kt" />
+        <option value="$PROJECT_DIR$/src/blockchain/workers/ChainType.kt" />
+        <option value="$PROJECT_DIR$/src/blockchain/workers/ReplaceSales.kt" />
       </list>
     </option>
   </component>
@@ -473,6 +475,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" order="0" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32843137" />
@@ -685,16 +688,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/blockchain/workers/ReplaceSales.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="234">
-          <caret line="9" column="46" selection-start-line="9" selection-start-column="46" selection-end-line="9" selection-end-column="46" />
-          <folding>
-            <element signature="e#28#97#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/blockchain/blocks/MaladyStatus.kt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="52">
@@ -754,10 +747,38 @@
         </state>
       </provider>
     </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_73/src.zip!/java/lang/Thread.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="208">
+          <caret line="439" column="4" lean-forward="true" selection-start-line="436" selection-start-column="4" selection-end-line="439" selection-end-column="4" />
+          <folding>
+            <element signature="e#14796#14797#0" expanded="true" />
+            <element signature="e#14860#14861#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/blockchain/workers/ReplaceMaladies.kt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="234">
-          <caret line="10" column="16" selection-start-line="10" selection-start-column="16" selection-end-line="10" selection-end-column="16" />
+        <state relative-caret-position="104">
+          <caret line="5" selection-start-line="5" selection-end-line="8" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/blockchain/workers/ChainType.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="78">
+          <caret line="3" column="17" selection-start-line="3" selection-start-column="17" selection-end-line="3" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/blockchain/workers/ReplaceSales.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="197">
+          <caret line="13" column="20" selection-start-line="13" selection-start-column="20" selection-end-line="13" selection-end-column="20" />
+          <folding>
+            <element signature="e#28#138#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
