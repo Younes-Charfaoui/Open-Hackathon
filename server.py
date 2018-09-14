@@ -2,8 +2,6 @@
 # Importing the libraries
 import json
 from flask import Flask, jsonify, request
-
-
 # Creating a Web App
 app = Flask(__name__)
 
@@ -19,8 +17,16 @@ def getSalesBlockchain():
     blockchain = json.load(file)
     return jsonify(blockchain), 200
 
-@app.route('/display', methods = ['GET'])
-def addBlock():
+@app.route('/addSaleBlock', methods = ['GET'])
+def addSaleBlock():
+    file = open('sales.json')
+    blockchain = json.load(file)
+    blockchain.append(json.loads(request.args.get('block')))
+    with open('sales.json','w') as data:    
+        json.dump(blockchain,data,indent=4)
+    return jsonify(blockchain),200
+
+
     
 
 app.run(host = '0.0.0.0', port = 5000)
