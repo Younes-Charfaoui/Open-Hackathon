@@ -8,6 +8,7 @@ import blockchain.factory.BlockchainPeersFactory
 import blockchain.models.Malady
 import org.json.JSONObject
 import utils.HashUtils
+import java.net.InetAddress
 import java.util.*
 
 /**
@@ -62,12 +63,13 @@ class MaladyBlockChain(data: MutableList<MaladyBlock> = mutableListOf())
         return false
     }
 
-    fun replaceChain(nodes: Array<String>) : Boolean {
-
+    fun replaceChain(nodes: Array<String>): Boolean {
+        val address = InetAddress.getLocalHost()
         var longestChain: BlockChain<*, *>? = null
         var maxLength = blockChain.size
 
-        for (node in nodes){
+        for (node in nodes) {
+            if (address.hostAddress == node) continue
             val blockPeer = BlockchainPeersFactory.getMaladiesBlockchain(node)
             val len = blockPeer.blockChain.size
 
@@ -76,10 +78,10 @@ class MaladyBlockChain(data: MutableList<MaladyBlock> = mutableListOf())
                 longestChain = blockPeer
             }
         }
-        if (longestChain != null){
+        if (longestChain != null) {
             @Suppress("UNCHECKED_CAST")
             blockChain = longestChain.blockChain as MutableList<MaladyBlock>
-            BlockchainFactory.saveBlockChainToJSONFile(this,"maladies.json")
+            BlockchainFactory.saveBlockChainToJSONFile(this, "maladies.json")
             return true
         }
         return false

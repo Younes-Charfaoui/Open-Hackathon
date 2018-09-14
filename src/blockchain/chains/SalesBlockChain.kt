@@ -8,6 +8,7 @@ import blockchain.factory.BlockchainPeersFactory
 import blockchain.models.Sale
 import org.json.JSONObject
 import utils.HashUtils
+import java.net.InetAddress
 import java.util.*
 
 
@@ -55,6 +56,9 @@ class SalesBlockChain(data: MutableList<SaleBlock> = mutableListOf())
                 model.pharmacyId,
                 nonce, Date().time, lastBLock.hash)
         blockChain.add(newBlock)
+
+
+
         return newBlock
     }
 
@@ -67,12 +71,13 @@ class SalesBlockChain(data: MutableList<SaleBlock> = mutableListOf())
         return null
     }
 
-    fun replaceChain(nodes: Array<String>) : Boolean {
-
+    fun replaceChain(nodes: Array<String>): Boolean {
+        val address = InetAddress.getLocalHost()
         var longestChain: BlockChain<*, *>? = null
         var maxLength = blockChain.size
 
-        for (node in nodes){
+        for (node in nodes) {
+            if (address.hostAddress == node) continue
             val blockPeer = BlockchainPeersFactory.getSaleBlockchain(node)
             val len = blockPeer.blockChain.size
 
@@ -81,10 +86,10 @@ class SalesBlockChain(data: MutableList<SaleBlock> = mutableListOf())
                 longestChain = blockPeer
             }
         }
-        if (longestChain != null){
+        if (longestChain != null) {
             @Suppress("UNCHECKED_CAST")
             blockChain = longestChain.blockChain as MutableList<SaleBlock>
-            BlockchainFactory.saveBlockChainToJSONFile(this,"sales.json")
+            BlockchainFactory.saveBlockChainToJSONFile(this, "sales.json")
             return true
         }
         return false
