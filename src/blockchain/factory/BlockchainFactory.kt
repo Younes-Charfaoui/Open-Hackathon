@@ -52,7 +52,6 @@ object BlockchainFactory {
         return MaladyBlockChain(allBlocks)
     }
 
-
     fun readSalesBlockChainFromJSONFile(path: String): SalesBlockChain {
         val blocks = JSONArray(String(Files.readAllBytes(Paths.get(path))))
         val allBlocks = mutableListOf<SaleBlock>()

@@ -73,7 +73,7 @@ class SalesBlockChain(data: MutableList<SaleBlock> = mutableListOf())
         var maxLength = blockChain.size
 
         for (node in nodes){
-            val blockPeer = BlockchainPeersFactory.getMaladiesBlockchain(node)
+            val blockPeer = BlockchainPeersFactory.getSaleBlockchain(node)
             val len = blockPeer.blockChain.size
 
             if (len > maxLength && blockPeer.isValid()) {
